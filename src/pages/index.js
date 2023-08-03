@@ -55,6 +55,12 @@ export default function Home() {
         });
         setCreatedUrl(`https://lysoso.me/${id}`);
         e.target.reset();
+      } else {
+        setFormStatus({
+          url: formStatus.url,
+          id: 'ID in use'
+        })
+        return;
       }
     }
   };
