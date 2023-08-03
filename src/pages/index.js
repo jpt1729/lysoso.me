@@ -72,6 +72,7 @@ export default function Home() {
           name="description"
           content="URL Shortener made by John Tan-Aristy"
         />
+        <link rel="canonical" href="https://lysoso.me"/>
       </Head>
       <main
         className={`${inter.className} w-full max-w-screen-xl m-auto h-screen`}
