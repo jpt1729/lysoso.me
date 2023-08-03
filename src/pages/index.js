@@ -11,7 +11,7 @@ export default function Home() {
     url: null,
     id: null,
   });
-  const [createdURL, setCreatedUrl] = useState("https://lysosome.me/aa");
+  const [createdURL, setCreatedUrl] = useState(null);
 
   const copyRef = useRef(null);
 
