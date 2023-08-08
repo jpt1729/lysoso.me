@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [createdURL, setCreatedURL] = useState("null");
+  const [createdURL, setCreatedURL] = useState(null);
 
   return (
     <>
