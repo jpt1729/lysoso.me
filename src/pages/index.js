@@ -98,9 +98,9 @@ export default function Home() {
           height={50}
           className="fixed"
         />
-        <div className="h-full p-4 flex md:justify-start justify-center items-center md:flex-row flex-col md:gap-3">
+        <div className="h-full p-4 flex md:justify-start justify-end items-center md:flex-row flex-col md:gap-3">
           <div className="flex flex-col gap-5 flex-1">
-            <h1 className="text-6xl font-bold">Lysoso.me</h1>
+            <h1 className="text-6xl font-bold mt-[20%]">Lysoso.me</h1>
             <p>{"[lai·suh·zowm] · noun"}</p>
             <p className="max-w-screen-sm">
               an organelle in the cytoplasm of eukaryotic cells containing
@@ -178,7 +178,7 @@ export default function Home() {
                 <span className="text-4xl font-bold">
                   Here is your shortened URL!
                 </span>
-                <div className="flex items-center w-fit">
+                <div className="flex items-center w-fit flex-wrap">
                   <span className="text-2xl">{createdURL}</span>
                   <motion.div
                     className="flex flex-col h-8 overflow-y-hidden pl-3"
@@ -187,7 +187,7 @@ export default function Home() {
                   >
                     <motion.button
                       onClick={() => {
-                        navigator.clipboard.writeText("createdURL");
+                        navigator.clipboard.writeText(createdURL);
                         setCopied(true);
                         setTimeout(() => {
                           setCopied(false);
@@ -217,7 +217,7 @@ export default function Home() {
                       </svg>
                     </motion.button>
                     <motion.p
-                      className="text-2xl"
+                      className="text-2xl w-fit md:static relative"
                       variants={{
                         copied: {
                           y: -32,
@@ -244,7 +244,6 @@ export default function Home() {
             )}
           </div>
         </div>
-        <span className="fixed bottom-0">Made with {'<3'} by John Tan-Aristy</span>
       </main>
     </>
   );
